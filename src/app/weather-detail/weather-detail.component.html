@@ -1,0 +1,21 @@
+<div class="city-weather-short-detail">
+  <h2>{{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
+  <span class="clock">00:00 PM</span>
+  <span class="date">date</span>
+  <span class="day">Friday</span>
+  <img
+    class="condition"
+    src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@2x.png"
+    alt="weather condition"
+  />
+  <span class="degrees">
+    {{ weatherData.main.temp.toFixed() }} <small>°C</small>
+  </span>
+  <div class="wind">
+    <img src="/assets/images/icons/wind.svg" alt="wind icon" />
+    <div>
+      <span class="wind-speed">{{ weatherData.wind.speed }} <small>speed</small></span>
+      <span class="wind-degree">{{ weatherData.wind.deg }}°<small>direction</small></span>
+    </div>
+  </div>
+</div>

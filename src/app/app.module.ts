@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { WeatherComponent } from './weather/weather.component';
 import { appRoutes } from './routes';
 import { InMemoryWeathersDataService } from './weather/services/in-memory-weathers-data.service';
+import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { InMemoryWeathersDataService } from './weather/services/in-memory-weathe
   ],
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

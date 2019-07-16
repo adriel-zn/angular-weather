@@ -1,0 +1,87 @@
+@import "variables";
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+}
+
+.city-weather-short-detail {
+  position: relative;
+  text-align: center;
+  flex-basis: 20em;
+  color: $light;
+  text-transform: capitalize;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  * {
+    z-index: 2;
+  }
+
+  .condition {
+    width: 5em;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  span {
+    font-weight: lighter;
+    color: darken($light, 10);
+  }
+
+  .day {
+    color: $secondary-color;
+  }
+
+  .degrees {
+    font-size: 2em;
+    font-weight: bold;
+    color: $light;
+  }
+
+  .clock {
+    font-size: 1.2em;
+  }
+
+  .wind {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 100%;
+
+    img {
+      max-width: 2.5em;
+      margin-left: 0.3em;
+    }
+
+    span {
+      display: block;
+      margin: 0 0.1em;
+    }
+    small {
+      font-size: 0.5em;
+    }
+  }
+}
