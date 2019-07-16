@@ -1,0 +1,29 @@
+@import 'grid';
+@import 'variables';
+@import 'global';
+
+html {
+  font-size: 62.5%; /* with the standard base font size of 16px this will be equal to 10px */
+}
+body {
+  font-size: 160%; /* 160% of 10px ~ 16px, understood by all browsers */
+  font-size: 1.6rem; /* 1.6 * 10px ~ 16px, understood by all major browsers and IE9+ */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: $blue;
+  // background-image: linear-gradient(to left bottom, #b13dfd, #a43ffe, #9641fe, #8742fe, #7744fe, #6c45fe, #6047fe, #5248fe, #4949fe, #3e4bff, #314cff, #204dff);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  box-sizing: border-box;
+  font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular',
+    'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
+    sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
