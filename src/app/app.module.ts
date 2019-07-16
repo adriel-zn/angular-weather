@@ -11,6 +11,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { appRoutes } from './routes';
 import { InMemoryWeathersDataService } from './weather/services/in-memory-weathers-data.service';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
     CoreModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryWeathersDataService),
-    ChartsModule
+    ChartsModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,

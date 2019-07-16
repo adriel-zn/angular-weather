@@ -3,11 +3,15 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { WeatherRepositoryService } from './services/weather-repository.service';
 import { Weather } from './models/weather.model';
+import { FadeIn } from '../shared/animations';
 
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.scss']
+  styleUrls: ['./weather.component.scss'],
+  animations: [
+    FadeIn
+  ]
 })
 export class WeatherComponent implements OnInit {
   currentCity: Weather = null;
