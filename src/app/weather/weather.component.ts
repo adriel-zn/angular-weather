@@ -18,6 +18,8 @@ export class WeatherComponent implements OnInit {
   weathers: Weather[] = null;
   selectedCityName: string;
 
+  sortBy: any = 'temp';
+
   constructor(
     private weathersRepositoryService: WeatherRepositoryService,
     private router: Router) { 

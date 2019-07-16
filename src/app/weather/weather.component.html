@@ -5,7 +5,7 @@
   [@simpleFadeAnimation]="'in'">
   <div class="city"
     [ngClass]="{'active': currentCity.name == city.name}"
-    *ngFor="let city of weathers;trackBy: trackByFn">
+    *ngFor="let city of weathers | sort: sortBy; trackBy: trackByFn">
     <a 
       [routerLink]="['/']"
       [queryParams]="{city:city.name.toLowerCase()}">

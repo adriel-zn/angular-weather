@@ -12,6 +12,7 @@ import { appRoutes } from './routes';
 import { InMemoryWeathersDataService } from './weather/services/in-memory-weathers-data.service';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 import { SharedModule } from './shared/shared.module';
+import { SortPipe } from './weather/pipes/sort.pipe';
 
 @NgModule({
   imports: [
@@ -21,12 +22,13 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryWeathersDataService),
     ChartsModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     AppComponent,
     WeatherComponent,
-    WeatherDetailComponent
+    WeatherDetailComponent,
+    SortPipe
   ],
   providers: [],
   bootstrap: [AppComponent]
