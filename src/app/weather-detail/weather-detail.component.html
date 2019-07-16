@@ -1,8 +1,8 @@
 <div class="city-weather-short-detail">
   <h2>{{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
-  <span class="clock">00:00 PM</span>
-  <span class="date">date</span>
-  <span class="day">Friday</span>
+  <span class="clock">{{today.time}}</span>
+  <span class="date">{{today.date}}</span>
+  <span class="day">{{today.day}}</span>
   <img
     class="condition"
     src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@2x.png"
@@ -19,3 +19,27 @@
     </div>
   </div>
 </div>
+<div class="city-weather-full-detail">
+  <div class="header">
+    <span class="today">
+      today
+    </span>
+    <div class="temp">
+      <span>H <strong>{{weatherData.main.temp_max}}</strong></span>
+      <span>L <strong>{{weatherData.main.temp_min}}</strong></span>
+    </div>
+  </div>
+  <div class="body">
+    <canvas
+      baseChart
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins">
+    </canvas>
+  </div>
+</div>
+  
