@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { ChartDataSets } from "chart.js";
 import { Color, Label } from "ng2-charts";
 
@@ -48,6 +48,10 @@ export class WeatherDetailComponent implements OnInit {
     this.generateCurrentDateTime();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.generateRandomChartData();
+  }
+  
   generateRandomChartData() {
     this.weatherChartData = [];
     const { temp_min, temp_max } = this.weatherData["main"];

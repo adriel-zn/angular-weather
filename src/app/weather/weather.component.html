@@ -5,7 +5,9 @@
   <div class="city"
     [ngClass]="{'active': currentCity.name == city.name}"
     *ngFor="let city of weathers;trackBy: trackByFn">
-    <a [routerLink]="['/']">
+    <a 
+      [routerLink]="['/']"
+      [queryParams]="{city:city.name.toLowerCase()}">
       <div class="thumbnail">
         <img src="/assets/images/thumbnails/{{city.name.toLowerCase()}}.jpg" alt="" />
       </div>

@@ -101,8 +101,9 @@
   }
 
   .today {
-    font-size: 2em;
+    font-size: 1.8em;
     text-transform: capitalize;
+    color: $secondary-title;
   }
 
   .temp span {
