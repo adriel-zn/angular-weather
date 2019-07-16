@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { WeatherComponent } from './weather/weather.component';
+import { appRoutes } from './routes';
+import { InMemoryWeathersDataService } from './weather/services/in-memory-weathers-data.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule
+    RouterModule.forRoot(appRoutes, {useHash: true}),
+    CoreModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryWeathersDataService)
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
