@@ -92,3 +92,12 @@
     }
   }
 }
+
+@media only screen and (max-width : 48em) {
+  .cities{
+    padding: 2em 1em;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
