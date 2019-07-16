@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { ChartDataSets } from "chart.js";
+import { ChartDataSets, ChartOptions } from "chart.js";
 import { Color, Label } from "ng2-charts";
 
 import { Weather } from '../weather/models/weather.model';
@@ -11,10 +11,10 @@ import { RandomNumberService } from './services/random-numbers.service';
   styleUrls: ['./weather-detail.component.scss']
 })
 export class WeatherDetailComponent implements OnInit {
-  @Input() weatherData: Weather[] = null;
+  @Input() weatherData: any;
   
   weatherChartData: Array<number> = [];
-  today: object = null;
+  today: any = null;
 
   public lineChartData: ChartDataSets[] = [{ data: [] }];
   public lineChartLabels: Label[] = [
