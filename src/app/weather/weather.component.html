@@ -1,7 +1,7 @@
 <div
   *ngIf="weathers"
   class="cities"
-  [style.backgroundImage]="'url(/assets/images/covers/' + currentCity.name.toLowerCase() + '.jpg)'"
+  [style.backgroundImage]="'url(./assets/images/covers/' + currentCity.name.toLowerCase() + '.jpg)'"
   [@simpleFadeAnimation]="'in'">
   <div class="city"
     [ngClass]="{'active': currentCity.name == city.name}"
@@ -10,7 +10,7 @@
       [routerLink]="['/']"
       [queryParams]="{city:city.name.toLowerCase()}">
       <div class="thumbnail">
-        <img src="/assets/images/thumbnails/{{city.name.toLowerCase()}}.jpg" alt="" />
+        <img src="./assets/images/thumbnails/{{city.name.toLowerCase()}}.jpg" alt="" />
       </div>
       <div class="info">
         <span class="title">{{city.name}}</span>
